@@ -25,7 +25,6 @@ header {
   object-fit: contain; /* 이미지 비율을 유지하며 요소에 맞게 조정 */
   max-width: 100%; /* 부모 요소의 너비를 넘지 않도록 제한 */
   max-height: 100%; /* 부모 요소의 높이를 넘지 않도록 제한 */
-  padding: 5rem 0;
 }
 
 /* 회원가입txt */
@@ -36,7 +35,8 @@ header {
   text-align: center;
   height: 40px;
   line-height: 40px;
-  padding-bottom: 1.3rem;
+  margin-top: 5rem;
+  margin-bottom: 1.3rem;
 }
 
 .signup-txt h1 {
@@ -48,7 +48,6 @@ header {
 }
 
 /* 폼 */
-
 .signup-form .signup-form__group {
   margin: 2rem 0;
   width: 330px;
@@ -68,7 +67,7 @@ select {
   font-size: 0.9rem;
   color: var(--gray2);
 }
-.box-shadow {
+.box-shadow10 {
   border-radius: 10px;
   background-color: white;
   box-shadow: 0px 0px 30px rgba(0, 0, 0, 0.05);
@@ -96,6 +95,13 @@ select {
   color: white;
   width: 100px;
   padding: 0.5rem 0.8rem;
+  margin-top: 1.3rem;
+
+  font-size: 1rem;
+  font-weight: 600;
+
   border-radius: 30px;
   border: none;
+
+  box-shadow: 0px 0px 30px rgba(0, 0, 0, 0.1);
 }
