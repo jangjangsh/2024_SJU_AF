@@ -19,20 +19,29 @@
 
       <!-- 아이디, 비밀번호 입력 칸 -->
       <div class="typing-container column-center">
-        <input
-          type="text"
-          id="studentid"
-          name="studentid"
-          class="typing-container__id"
-          placeholder="아이디를 입력하세요."
-        />
-        <input
-          type="password"
-          id="studentpw"
-          name="studentpw"
-          class="typing-container__pw"
-          placeholder="비밀번호를 입력하세요."
-        />
+        <div class="typing-container__id">
+          <!-- <div class="typing-container__img"> -->
+          <img src="img/Account.png" alt="account" />
+
+          <!-- </div> -->
+
+          <input
+            type="text"
+            id="studentid"
+            name="studentid"
+            placeholder="아이디를 입력하세요."
+          />
+        </div>
+
+        <div class="typing-container__pw">
+          <img src="img/Key.png" alt="" />
+          <input
+            type="password"
+            id="studentpw"
+            name="studentpw"
+            placeholder="비밀번호를 입력하세요."
+          />
+        </div>
       </div>
 
       <!-- 로그인, 회원가입 버튼 -->

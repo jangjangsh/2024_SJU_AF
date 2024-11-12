@@ -13,6 +13,25 @@
   margin-top: 2rem;
 }
 
+.typing-container__id,
+.typing-container__pw {
+  position: relative;
+
+  display: flex;
+  align-items: center;
+}
+
+.typing-container img {
+  position: absolute;
+
+  width: 18px;
+  height: 18px;
+
+  margin: 0 0 0.6rem 0.8rem;
+
+  color: var(--gray2);
+}
+
 .typing-container input {
   all: unset;
   text-align: left;
@@ -20,19 +39,26 @@
   font-size: 0.8rem;
   letter-spacing: 0.05rem;
 
-  height: 100%;
+  height: 20px;
   width: 250px;
   border-radius: 10px;
-  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.07);
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.03);
+  border: 1px solid rgb(245, 245, 245);
 
   padding: 0.7rem 2.5rem;
   margin-bottom: 0.7rem;
 }
 
 input::placeholder {
-  color: rgb(187, 187, 187);
+  color: var(--gray2);
 }
 
+input:focus::placeholder {
+  color: white;
+  transition: color 0.1s ease;
+}
+
+/* 로그인, 회원가입 버튼/ */
 .button-container {
   margin-top: 0.7rem;
 }
@@ -53,10 +79,26 @@ input::placeholder {
   color: white;
   margin-bottom: 0.6rem;
   cursor: pointer;
+  transition: all 0.1s ease;
 }
 
 .button-container__signup {
   background-color: var(--gray1);
   color: var(--gray2);
   cursor: pointer;
+  transition: all 0.1s ease;
+}
+
+.button-container__login:hover {
+  box-shadow: 0 2px 3px rgba(0, 0, 0, 0.2);
+  background-color: rgb(46, 46, 46);
+  color: white;
+}
+
+.button-container__signup:hover {
+  background-color: rgb(233, 233, 233);
+}
+
+.button-container__img {
+  display: flex;
 }

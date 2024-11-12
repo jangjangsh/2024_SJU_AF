@@ -3,7 +3,9 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="style.css" href="reset.css" />
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="reset.css" />
+    <link rel="stylesheet" href="index.css" />
     <link
       rel="stylesheet"
       href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;700&display=swap"
@@ -13,11 +15,19 @@
 
   <body>
     <div class="start-section column-center">
+      <!-- 로고 -->
       <img src="img/Logo.png" alt="로고" />
-      <div class="start-section__title">채팅 시작하기</div>
-      <a href="2-login.html">
-        <div class="start-section__button"></div>
-      </a>
+      <!-- 채팅 시작하기 칸 -->
+
+      <!-- 시작 버튼 -->
+      <div class="button-container">
+        <div class="button-container__title center">채팅 시작하기</div>
+        <div class="button-container__button">
+          <a href="2-login.html" class="circle center">
+            <img src="img/Arrow.png" alt="arrow" />
+          </a>
+        </div>
+      </div>
     </div>
   </body>
 </html>
