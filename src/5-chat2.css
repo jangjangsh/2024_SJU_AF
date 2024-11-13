@@ -1,10 +1,23 @@
 main {
   height: calc(100vh - 3.5rem); /* 전체 화면에서 상단 여백을 빼서 사용 */
 }
-.header-section {
+
+.nav-section {
+  display: flex;
+  justify-content: space-between;
+
   width: 100%;
   height: 100%;
-  padding-top: 1rem;
+  padding: 1rem 1.5rem 0 1.5rem;
+
+  width: 100vw;
+}
+.logo {
+  display: flex;
+}
+
+.logo img {
+  width: 50px;
 }
 
 .chat-section {
@@ -16,7 +29,8 @@ main {
 /* 내 담당 왼쪽 : info-container */
 .info-container {
   height: 100%;
-  width: 20%;
+  width: 18%;
+  /* 에반가 18% */
   display: flex;
   flex-direction: column;
   gap: 15px; /* 두 섹션 사이의 간격 */
@@ -46,21 +60,26 @@ main {
 }
 
 /* 링크 컨테이너 속 요소들 배치 */
-.link-container__box {
+/* .link-container__box {
   height: 100%;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-}
+} */
 
 /* 링크 컨테이너 속 링크들/ */
 .link-container a {
-  font-size: 0.75rem;
+  font-size: 0.8rem;
   text-decoration: none;
   color: var(--gray2);
 
   width: 100%;
-  padding: 0.63rem 0.7rem;
+  padding: 0.65rem 0.7rem;
+  margin-bottom: 0.6rem;
+
+  white-space: nowrap; /* 텍스트를 한 줄로 표시 */
+  overflow: hidden; /* 넘치는 텍스트를 숨김 */
+  text-overflow: ellipsis; /* 넘치는 부분을 '...'로 표시 */
 
   background-color: white;
   border: 1px solid rgb(240, 240, 240);
@@ -129,17 +148,18 @@ main {
   justify-content: flex-end; /* 요소들을 아래로 정렬 */
 
   height: 100%;
-  width: 80%;
+  width: 82%;
 
   margin-left: 0.8rem;
 }
+
 .chatbot-container__chatting {
   width: 100%;
   height: 100%;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
+
+  padding: 1.5em 2rem;
+  /* padding값 추가 */
+  /* column-center 줌 스타일 중복돼서 */
 }
 
 /* 채팅만 */
@@ -147,7 +167,8 @@ main {
   flex-grow: 1; /* 채팅 부분이 남는 공간을 모두 차지하도록 */
   display: flex;
   flex-direction: column;
-  width: 95%;
+  width: 100%;
+  /* padding 값 줘서 중복돼서 잠시 주석! */
   overflow: auto;
 }
 
@@ -158,7 +179,7 @@ main {
 
   margin: 1rem 0;
   margin-left: auto;
-  margin-right: 2.5%;
+  /* margin-right: 2.5%; */
 
   max-width: 80%;
 }
@@ -166,10 +187,11 @@ main {
 /* 말풍선모양 */
 .chatbot-bubble-group {
   position: relative;
-  padding: 10px 15px;
-  border-radius: 10px;
+  padding: 0.8rem 1rem;
+  border-radius: 20px;
+  /* 좀 더 동글동글하고 여백을 넓게 해봤어! */
   max-width: 250px;
-  font-size: 0.9rem;
+  font-size: 1rem;
   color: #fff;
 }
 
@@ -186,7 +208,8 @@ main {
   border: 10px solid transparent;
   border-left-color: var(--red);
   border-right: 0;
-  margin-left: 13px;
+  margin-right: 20px;
+  /* 여기다가 하면 밑에 2.5% 안 해도 될 것 같아서 잠시 주석을...해보겟어 밑 2.5% 주석해볼게 */
 }
 
 .me-question-content {
@@ -198,8 +221,9 @@ main {
   display: flex;
   align-items: end;
   margin-bottom: 1rem;
-  margin-left: 2.5%;
   max-width: 80%;
+
+  line-height: 1.2;
 }
 
 /* 챗봇프로필사진 */
@@ -264,38 +288,71 @@ main {
 }
 /* 질문입련란 */
 .question-input-container {
-  width: 95%;
+  width: 100%;
+  /* padding 처리 했으니 다 사용해도 간격이 잇엉/ */
 }
 
 .input-submit {
+  display: flex;
+  align-items: center; /* 세로 가운데 정렬 */
+  justify-content: flex-end;
   position: relative;
-  margin-bottom: 1rem;
+  width: 100%;
+  height: 100%;
+  /* margin-bottom: 1rem; */
+  /* 이것도 padding 처리 했으니 없어도 돼 */
 }
 .question-input {
   width: 100%;
   height: 40px;
+  padding: 1.6rem;
 
+  font-size: 1rem;
+
+  border-style: none;
   border-radius: 30px;
-  border: 1.5px solid var(--gray1);
+  border: 1px solid rgb(240, 240, 240);
 
-  padding: 0 0.7rem;
-  color: var(--gray2);
+  transition: all 0.1ㄴ ease;
+}
+
+.question-input::placeholder {
+  color: gray;
+}
+.question-input:focus::placeholder {
+  color: white;
+}
+
+.question-input:focus {
+  outline: none; /* 포커스 상태에서 outline 제거 */
 }
 
 .question-submit-button {
   position: absolute;
-  right: 10px;
-  top: 15%;
 
-  width: 70px;
-  height: 30px;
+  /* right: 10px;
+  top: 15%; */
+  /* 뭔가 이렇게 하면 정중앙에 없을 것 같아서 다르게 해볼게1 */
+
+  /* width: 70px;
+  height: 30px; */
+
+  padding: 0.8rem 2rem;
+  margin-right: 0.4rem;
+
   border-radius: 30px;
   border: none;
   background-color: var(--gray1);
+  cursor: pointer;
 
   box-shadow: 0px 0px 30px rgba(0, 0, 0, 0.05);
+
+  transition: all 0.1s ease;
 }
 
 .question-submit-button:hover {
-  cursor: pointer;
+  /* cursor: pointer; */
+  /* 이건 호버 안 해도 그냥 호버처럼 작용해서 주석처리할겡 */
+  background-color: black;
+  color: white;
 }
