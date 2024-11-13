@@ -52,7 +52,7 @@
 
 /* 링크 컨테이너 속 링크들/ */
 .link-container a {
-  font-size: 0.7rem;
+  font-size: 0.75rem;
   text-decoration: none;
   color: var(--gray2);
 
@@ -60,17 +60,18 @@
   padding: 0.63rem 0.7rem;
 
   background-color: white;
-  border: 1px solid rgb(247, 247, 247);
+  border: 1px solid rgb(240, 240, 240);
   box-shadow: 0 0 5px rgba(0, 0, 0, 0.03);
-  border-radius: 7px;
+  border-radius: 10px;
 
-  transition: all 0.1s ease;
+  transition: all 0.2s ease;
 }
 
 .link-container a:hover {
+  background-color: var(--red);
+  color: white;
   box-shadow: 0 2px 3px rgba(0, 0, 0, 0.1);
-  border: 1px solid rgb(239, 239, 239);
-  color: black;
+  border: 1px solid var(--red);
 }
 
 /* 요소 감추기 */
