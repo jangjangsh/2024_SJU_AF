@@ -5,16 +5,18 @@
 }
 
 main {
-  height: 100vh;
-  flex-wrap: wrap; /* 화면 크기에 따라 줄 바꿈 */
-  display: flex;
+  height: calc(100vh - 3.5rem); /* 전체 화면에서 상단 여백을 빼서 사용 */
+}
+.header-section {
+  width: 100%;
+  height: 100%;
+  padding-top: 1rem;
 }
 
 .chat-section {
   display: flex;
-  height: 100vh; /* 화면 전체 높이 */
-  width: 100vw; /* 화면 전체 너비 */
-  padding: 1.5rem;
+  height: 100%; /* 화면 전체 높이 */
+  width: 100%; /* 화면 전체 너비 */
 }
 
 /* 내 담당 왼쪽 : info-container */
@@ -30,7 +32,7 @@ main {
 .info-container__calender {
   /* 같은 크기로 분배 */
   flex: 1;
-  padding: 1rem;
+  padding: 0.7rem 1rem;
 }
 
 /* 상단 바로가기 전체 container */
@@ -38,16 +40,6 @@ main {
   width: 100%;
   height: 100%;
   justify-content: space-between; /* 상하 간격을 균등하게 */
-}
-
-/* 바로가기 타이틀 */
-.info-container__title {
-  font-size: 1.3rem;
-  font-weight: 520;
-
-  padding-bottom: 0.8rem;
-
-  border-bottom: 1px solid var(--gray1);
 }
 
 /* 링크 컨테이너 속 링크를 담는 박스 */
@@ -69,14 +61,26 @@ main {
 
 /* 링크 컨테이너 속 링크들/ */
 .link-container a {
-  font-size: 0.7rem;
+  font-size: 0.75rem;
   text-decoration: none;
   color: var(--gray2);
 
   width: 100%;
-  padding: 0.65rem 0.7rem;
-  background-color: var(--gray1);
-  border-radius: 7px;
+  padding: 0.63rem 0.7rem;
+
+  background-color: white;
+  border: 1px solid rgb(240, 240, 240);
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.03);
+  border-radius: 10px;
+
+  transition: all 0.2s ease;
+}
+
+.link-container a:hover {
+  background-color: var(--red);
+  color: white;
+  box-shadow: 0 2px 3px rgba(0, 0, 0, 0.1);
+  border: 1px solid var(--red);
 }
 
 /* 요소 감추기 */
