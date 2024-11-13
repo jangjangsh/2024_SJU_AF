@@ -4,51 +4,87 @@
 }
 
 .start-section img {
-  width: 250px;
+  width: 280px;
 }
 
+.start-section a {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+}
+
+/* 시작 버튼 */
 .button-container {
   position: relative;
+
   display: flex;
-  justify-content: flex-end;
   align-items: center;
-}
-.button-container__title {
+  justify-content: flex-end;
+
   margin-top: 2rem;
-  padding: 0.7rem 5.5rem;
-  border-radius: 50px;
-  background-color: white;
-  box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.1);
-
-  letter-spacing: 0.2rem;
-  font-weight: 200;
-}
-
-.button-container__button {
-  cursor: pointer;
-  position: absolute; /* 부모를 기준으로 절대 위치 설정 */
-  margin: 2rem 0.5rem 0 0;
-}
-
-.button-container__button img {
-  width: 18px;
-  margin-bottom: 0.02rem;
-  margin-left: 0.02em;
 
   transition: all 0.1s ease;
 }
 
+.button-container button {
+  padding: 1rem 7rem;
+  cursor: pointer;
+
+  background-color: rgb(255, 255, 255);
+
+  border-radius: 50px;
+  border: none; /* 버튼 테두리 없애기 */
+  box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.1);
+}
+
+.button-container:hover button {
+  background-color: rgb(50, 50, 50);
+  box-shadow: inset 0 -5px 15px black;
+}
+.button-container:hover .circle {
+  background-color: rgb(255, 255, 255);
+}
+
+.button-container:hover img {
+  filter: brightness(0%);
+}
+
+.button-container:hover .button-container__title {
+  color: white;
+}
+
+.arrow-container {
+  display: flex;
+  position: absolute;
+}
+
+/* 부모 요소 */
 .circle {
-  width: 26px;
-  height: 26px;
+  width: 34px;
+  height: 34px;
 
   background-color: black;
   border-radius: 100%;
 
+  margin-right: 0.5rem;
+
   transition: all 0.1s ease;
 }
 
-.circle:hover {
+/* .circle:hover {
   background-color: var(--red);
   box-shadow: 0 2px 5px rgba(255, 255, 255, 0.2);
+} */
+
+/* 자식 요소 */
+.button-container img {
+  width: 70%;
+}
+
+.button-container__title {
+  font-size: 1rem;
+  letter-spacing: 0.3rem;
+  font-weight: 400;
+
+  color: black;
 }
