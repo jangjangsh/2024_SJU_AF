@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="reset.css" />
+    <link rel="stylesheet" href="style.css" />
+    <!-- 테스트 코드로 변경 -->
+    <link rel="stylesheet" href="chat.css" />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;700&display=swap"
+    />
+    <title>물어보세종</title>
+  </head>
+
+  <body>
+    <header>
+      <div class="header-section center">
+        <img src="img/Logo.png" alt="로고" class="center" width="50px" />
+      </div>
+    </header>
+
+    <main>
+      <!-- 왼쪽 info, 오른쪽 chatbot -->
+      <div class="chat-section">
+        <div class="info-container">
+          <!-- 바로가기 부분 -->
+          <div class="info-container__link box-shadow">
+            <div class="link-container">
+              <!-- 각 연결된 링크 -->
+              <div class="link-container__box">
+                <div class="info-title">
+                  <div class="info-icon center">
+                    <img src="img/Link.png" alt="link" />
+                  </div>
+                  <div class="title center">바로가기</div>
+                </div>
+
+                <div class="link-container__elements">
+                  <a href="http://sejong.ac.kr/"
+                    >⭐️ 세종대학교 공식 홈페이지</a
+                  >
+                  <a href="http://classic.sejong.ac.kr/"
+                    >📚 대양휴머니티칼리지</a
+                  >
+                  <a href="https://do.sejong.ac.kr/"
+                    >✍️ 두드림 (비교과통합관리시스템)</a
+                  >
+                  <a href="https://portal.sejong.ac.kr/user/index.do"
+                    >📖 세종대학교포털 (학사정보시스템)</a
+                  >
+                  <!-- <a href="">⭐️ 세종대학교 공식 홈페이지</a> -->
+                  <a href="">⭐️ 세종대학교 공식 홈페이지</a>
+                  <a href="">⭐️ 세종대학교 공식 홈페이지</a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- 학사일정 캘린더 부분 -->
+          <div class="info-container__calender box-shadow">
+            <div class="calender-box">
+              <!-- 상단 학사일정 내용  -->
+              <div class="info-title">
+                <div class="info-icon">
+                  <img src="img/Book.png" alt="book" />
+                </div>
+                <div class="title center">학사일정</div>
+              </div>
+            </div>
+            <img src="img/Calender.png" alt="Calender" />
+            <!-- 학사일정 내용 부분 -->
+            <div class="academic-schedule">
+              <div class="academic-schedule__day">5</div>
+              <div class="academic-schedule__content">
+                • 2학기 중간고사 성적 입력
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="chatbot-container">
+          <div class="chatbot-container__chatting box-shadow">
+            <div class="chatbot-container-main">
+              <!-- 내 질문 -->
+              <div class="me-question">
+                <div class="chatbot-bubble-group me-bubble">
+                  <span class="me-question-content">
+                    지금 센B110에서 수업 중이야?
+                  </span>
+                </div>
+              </div>
+
+              <!-- 챗봇 답변 -->
+              <div class="chatbot-answer-container">
+                <div class="chatbot-profile">
+                  <div class="chatbot-profile-img">
+                    <img src="./img/Logo.png" alt="profile" />
+                  </div>
+                </div>
+                <div class="chatbot-answer">
+                  <div class="chatbot-bubble-group chatbot-bubble">
+                    <span class="chatbot-answer-content">
+                      네, 수업 진행 중입니다. 현재 센B110 강의실은 OOO 교수님의
+                      오픈소스SW개론 수업이 13시 30분까지 진행될 예정입니다.
+                    </span>
+                  </div>
+                </div>
+              </div>
+
+              <!-- 채팅여러개 보냈을 때 확인용 -->
+              <!-- 내 질문 -->
+              <div class="me-question">
+                <div class="chatbot-bubble-group me-bubble">
+                  <span class="me-question-content">
+                    지금 센B110에서 수업 중이야?
+                  </span>
+                </div>
+              </div>
+
+              <!-- 챗봇 답변 -->
+              <div class="chatbot-answer-container">
+                <div class="chatbot-profile">
+                  <div class="chatbot-profile-img">
+                    <img src="./img/Logo.png" alt="profile" />
+                  </div>
+                </div>
+                <div class="chatbot-answer">
+                  <div class="chatbot-bubble-group chatbot-bubble">
+                    <span class="chatbot-answer-content">
+                      네, 수업 진행 중입니다. 현재 센B110 강의실은 OOO 교수님의
+                      오픈소스SW개론 수업이 13시 30분까지 진행될 예정입니다.
+                    </span>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- 예상 질문 예시 -->
+            <div class="question-example-container">
+              <button type="submit" class="question-example">
+                꿀교양 알려줘
+              </button>
+              <button type="submit" class="question-example">
+                이번학기 수강신청 일정 알려줘
+              </button>
+            </div>
+
+            <!-- 질문입력란 -->
+            <div class="question-input-container">
+              <form action="/ask" method="post" class="question-form">
+                <div class="input-submit">
+                  <input
+                    type="text"
+                    name="question"
+                    placeholder="무엇이든 물어보세요!"
+                    class="question-input"
+                  />
+                  <button type="submit" class="question-submit-button">
+                    전송
+                  </button>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+        </div>
+      </div>
+    </main>
+  </body>
+</html>
