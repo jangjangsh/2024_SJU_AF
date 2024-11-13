@@ -34,4 +34,21 @@
   width: 18px;
   margin-bottom: 0.02rem;
   margin-left: 0.02em;
+
+  transition: all 0.1s ease;
+}
+
+.circle {
+  width: 26px;
+  height: 26px;
+
+  background-color: black;
+  border-radius: 100%;
+
+  transition: all 0.1s ease;
+}
+
+.circle:hover {
+  background-color: var(--red);
+  box-shadow: 0 2px 5px rgba(255, 255, 255, 0.2);
 }
