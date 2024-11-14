@@ -69,7 +69,7 @@ main {
 
 /* 링크 컨테이너 속 링크들/ */
 .link-container a {
-  font-size: 0.8rem;
+  font-size: 14px;
   text-decoration: none;
   color: var(--gray2);
 
